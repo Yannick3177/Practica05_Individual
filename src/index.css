@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+/* "static" fuerza a emitir las variables, para usarlas también desde los CSS Modules */
+@theme static {
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-sans: 'Instrument Sans', system-ui, sans-serif;
+  --color-ink: #12332b;
+  --color-sage: #e8eee6;
+  --color-paper: #fbfcfa;
+  --color-cherry: #c8283c;
+  --color-honey: #e0a030;
+  --color-moss: #3e7b56;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-sage);
+  color: var(--color-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+/* IA: colisión de la clase .card global con la del módulo → Solución manual: CSS Modules la hashea y el scope queda aislado */
+.card {
+  background: red;
+}

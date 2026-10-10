@@ -1,0 +1,1 @@
+export const soles = (n) => `S/ ${n.toLocaleString('en-US')}`
